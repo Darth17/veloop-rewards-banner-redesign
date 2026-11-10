@@ -1,0 +1,219 @@
+.header {
+  font-family: 'Manrope', 'Plus Jakarta Sans Variable', system-ui, sans-serif;
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  border-bottom: 1px solid rgba(170, 176, 204, 0.12);
+  background: rgba(22, 24, 39, 0.88);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+}
+
+.headerInner {
+  width: 100%;
+  max-width: 1460px;
+  min-height: 78px;
+  margin: 0 auto;
+  padding: 0 clamp(18px, 4.2vw, 64px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+  color: var(--ve-text);
+  text-decoration: none;
+}
+
+.brandMark {
+  width: 39px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(242, 200, 105, 0.32);
+  border-radius: 13px;
+  color: var(--ve-gold);
+  font-size: 21px;
+  background: linear-gradient(145deg, rgba(242, 200, 105, 0.16), rgba(170, 176, 204, 0.08));
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), 0 6px 20px rgba(0, 0, 0, 0.16);
+}
+
+.brandText {
+  display: grid;
+  gap: 1px;
+  line-height: 1;
+  letter-spacing: 0.08em;
+}
+
+.brandText strong {
+  color: var(--ve-text);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.035em;
+}
+
+.brandText small {
+  color: var(--ve-muted);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2.4vw, 34px);
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--ve-muted);
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.navLink:hover,
+.active {
+  color: var(--ve-gold);
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.previewStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--ve-muted);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.045em;
+  white-space: nowrap;
+}
+
+.previewStatus span {
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  border-radius: 50%;
+  background: var(--ve-gold);
+  box-shadow: 0 0 0 4px rgba(242, 200, 105, 0.10);
+}
+
+.helpLink {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(170, 176, 204, 0.16);
+  border-radius: 50%;
+  color: var(--ve-muted);
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.helpLink:hover {
+  border-color: rgba(242, 200, 105, 0.42);
+  color: var(--ve-gold);
+  background: rgba(242, 200, 105, 0.05);
+}
+
+.headerCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid rgba(242, 200, 105, 0.35);
+  border-radius: 999px;
+  color: var(--ve-gold);
+  background: rgba(242, 200, 105, 0.07);
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.025em;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.headerCta:hover {
+  transform: translateY(-1px);
+  color: var(--ve-text);
+  background: rgba(242, 200, 105, 0.15);
+}
+
+.brand:focus-visible,
+.navLink:focus-visible,
+.helpLink:focus-visible,
+.headerCta:focus-visible {
+  outline: 2px solid var(--ve-gold);
+  outline-offset: 4px;
+  border-radius: 5px;
+}
+
+@media (max-width: 900px) {
+  .headerInner {
+    gap: 16px;
+  }
+
+  .navigation {
+    gap: 16px;
+  }
+
+  .navLink {
+    font-size: 11px;
+  }
+
+  .headerActions {
+    gap: 9px;
+  }
+}
+
+@media (max-width: 760px) {
+  .headerInner {
+    min-height: 68px;
+    gap: 12px;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .headerActions {
+    margin-left: auto;
+    gap: 9px;
+  }
+
+  .previewStatus {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .headerCta {
+    padding: 9px 11px;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brandMark {
+    width: 36px;
+    height: 36px;
+  }
+}

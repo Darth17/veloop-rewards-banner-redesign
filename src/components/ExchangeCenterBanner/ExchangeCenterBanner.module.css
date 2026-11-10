@@ -1,0 +1,159 @@
+/* Theme: violet -> gold. Left = Gems, right = VEs, so the conversion reads instantly. */
+.theme {
+  --card-bg: radial-gradient(40% 70% at 30% 55%, rgba(112, 88, 230, 0.2), transparent 70%),
+    radial-gradient(40% 70% at 85% 50%, rgba(226, 180, 85, 0.16), transparent 70%),
+    linear-gradient(135deg, #15142f 0%, #0f1026 60%, #14122e 100%);
+  --card-border: rgba(150, 130, 230, 0.26);
+  --card-border-hover: rgba(200, 175, 140, 0.55);
+  --card-glow: rgba(170, 140, 200, 0.45);
+}
+
+.gemAccent {
+  background: linear-gradient(90deg, #c0aeff, #8e72f2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.veAccent {
+  background: linear-gradient(90deg, #f3d27a, #c99a3c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.floatY {
+  animation: floatY 4.4s ease-in-out infinite alternate;
+  animation-play-state: var(--play);
+}
+@keyframes floatY {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-8px);
+  }
+}
+
+.glowPulse {
+  animation: glowPulse 3.2s ease-in-out infinite alternate;
+  animation-play-state: var(--play);
+}
+@keyframes glowPulse {
+  from {
+    filter: drop-shadow(0 0 0 rgba(243, 200, 98, 0));
+  }
+  to {
+    filter: drop-shadow(0 0 14px rgba(243, 200, 98, 0.55));
+  }
+}
+
+.spin {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: spin 10s linear infinite;
+  animation-play-state: var(--play);
+}
+.theme:hover .spin {
+  animation-duration: 3s;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.arrow {
+  animation: nudge 1.8s ease-in-out infinite;
+  animation-play-state: var(--play);
+}
+@keyframes nudge {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+}
+
+.stream {
+  animation: stream 2.2s ease-in infinite;
+  animation-play-state: var(--play);
+}
+@keyframes stream {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(42px);
+    opacity: 0;
+  }
+}
+
+/* Gem -> Convert -> VE */
+.flow {
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.flow li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+}
+.flow li:not(:last-child) {
+  margin-right: 46px;
+}
+.flow li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 22px;
+  left: calc(100% + 6px);
+  width: 34px;
+  border-top: 2px dotted rgba(167, 150, 255, 0.65);
+}
+.node {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1.5px solid;
+  font-size: 13px;
+  font-weight: 800;
+}
+.gem {
+  border-color: #7f6fe6;
+  background: rgba(112, 88, 230, 0.15);
+}
+.mid {
+  border-color: #8f7bff;
+  background: rgba(255, 255, 255, 0.04);
+  color: #c9bbff;
+}
+.ve {
+  border-color: #d9b25a;
+  background: rgba(226, 180, 85, 0.14);
+  color: #f3d27a;
+  font-style: italic;
+}
+.label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #9aa0bd;
+}
+.gemText {
+  color: #a994ff;
+}
+.veText {
+  color: #e2b455;
+}

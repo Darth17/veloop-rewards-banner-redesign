@@ -1,0 +1,30 @@
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: #aab0cc;
+  text-decoration: none;
+}
+.back:hover {
+  color: #fff;
+}
+.back:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+.title {
+  margin: 16px 0 8px;
+  font-size: 32px;
+  font-weight: 800;
+  color: #fff;
+}
+.blurb {
+  font-size: 16px;
+  color: #d3d7ea;
+}
+.note {
+  font-size: 13px;
+  color: #8b91ad;
+}

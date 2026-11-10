@@ -1,0 +1,108 @@
+/* Theme: midnight blue with gold + steel-blue (two currencies, one swap). */
+.theme {
+  --card-bg: radial-gradient(55% 80% at 70% 55%, rgba(60, 110, 230, 0.26), transparent 70%),
+    linear-gradient(135deg, #12183c 0%, #0c1130 60%, #101638 100%);
+  --card-border: rgba(110, 140, 235, 0.26);
+  --card-border-hover: rgba(130, 170, 255, 0.55);
+  --card-glow: rgba(70, 120, 240, 0.5);
+}
+
+.accent {
+  background: linear-gradient(90deg, #f3d27a, #c99a3c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.rule {
+  display: block;
+  width: 72px;
+  height: 2px;
+  background: linear-gradient(90deg, #c99a3c, transparent);
+}
+
+/* swap arrows turn slowly; hovering the card speeds them up */
+.spin {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: spin 14s linear infinite;
+  animation-play-state: var(--play);
+}
+.theme:hover .spin {
+  animation-duration: 4s;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.driftL,
+.driftR {
+  animation-name: drift;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 5s;
+  animation-play-state: var(--play);
+}
+.driftR {
+  animation-delay: -2.5s;
+}
+@keyframes drift {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-7px);
+  }
+}
+
+.streakR,
+.streakL {
+  animation-duration: 2.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: var(--play);
+}
+.streakR {
+  animation-name: streakRight;
+}
+.streakL {
+  animation-name: streakLeft;
+}
+@keyframes streakRight {
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(8px);
+    opacity: 1;
+  }
+}
+@keyframes streakLeft {
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(-8px);
+    opacity: 1;
+  }
+}
+
+.twinkle {
+  animation: twinkle 2.6s ease-in-out infinite alternate;
+  animation-play-state: var(--play);
+}
+@keyframes twinkle {
+  from {
+    opacity: 0.25;
+  }
+  to {
+    opacity: 1;
+  }
+}

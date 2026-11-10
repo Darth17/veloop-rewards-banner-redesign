@@ -1,0 +1,249 @@
+/* Theme: ink navy with soft blue -> violet (social / sharing). */
+.theme {
+  --card-bg: radial-gradient(50% 75% at 74% 42%, rgba(100, 80, 230, 0.26), transparent 70%),
+    linear-gradient(135deg, #15162f 0%, #0f1026 60%, #141530 100%);
+  --card-border: rgba(110, 125, 255, 0.24);
+  --card-border-hover: rgba(140, 150, 255, 0.55);
+  --card-glow: rgba(100, 90, 240, 0.55);
+}
+
+.line {
+  display: block;
+}
+.accent {
+  background: linear-gradient(90deg, #3aa6f5, #9a63f0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid rgba(120, 140, 255, 0.28);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #5ec4ee;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+/* Secondary CTA. Positioned above the stretched card link so it stays clickable. */
+.secondary {
+  position: relative;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 18px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  color: #e9ebff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.secondary:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(160, 170, 255, 0.5);
+  transform: translateY(-1px);
+}
+.secondary:active {
+  transform: scale(0.98);
+}
+.secondary:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+/* ---------- illustration ---------- */
+.codeCard {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  height: 100%;
+  padding: 8px 14px;
+  border: 1px solid rgba(150, 140, 255, 0.5);
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(88, 76, 220, 0.92), rgba(46, 38, 130, 0.92));
+  font-family: inherit;
+}
+.codeLabel {
+  font-size: 11px;
+  color: #d3d7ff;
+}
+.codeRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.code {
+  color: #fff;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.copyBtn {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid rgba(190, 195, 255, 0.4);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  cursor: pointer;
+  pointer-events: auto; /* the illustration itself ignores taps; this button doesn't */
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.copyBtn:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+.copyBtn:active {
+  transform: scale(0.94);
+}
+.copyBtn:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+.bob {
+  animation: bob 4.2s ease-in-out infinite alternate;
+  animation-play-state: var(--play);
+}
+@keyframes bob {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-8px);
+  }
+}
+
+.gift {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  animation: gift 3.6s ease-in-out infinite;
+  animation-play-state: var(--play);
+}
+@keyframes gift {
+  0%,
+  70%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+  80% {
+    transform: translateY(-6px) rotate(-1.5deg);
+  }
+  90% {
+    transform: translateY(0) rotate(1.5deg);
+  }
+}
+
+.twinkle {
+  animation: twinkle 2.6s ease-in-out infinite alternate;
+  animation-play-state: var(--play);
+}
+@keyframes twinkle {
+  from {
+    opacity: 0.25;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---------- feature strip ---------- */
+.strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
+  padding: 12px 6px;
+  list-style: none;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  background: rgba(8, 9, 28, 0.55);
+}
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+}
+.feature + .feature {
+  border-left: 1px solid rgba(255, 255, 255, 0.07);
+}
+.fIcon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border: 1px solid;
+  border-radius: 50%;
+}
+.share {
+  border-color: #4b63e6;
+  background: rgba(75, 99, 230, 0.16);
+  color: #8fa4ff;
+}
+.rewards {
+  border-color: #9a63f0;
+  background: rgba(154, 99, 240, 0.16);
+  color: #c7a2ff;
+}
+.secure {
+  border-color: #3aa6c8;
+  background: rgba(58, 166, 200, 0.14);
+  color: #7fd3ea;
+}
+.unlimited {
+  border-color: #c99a3c;
+  background: rgba(201, 154, 60, 0.14);
+  color: #f3d27a;
+}
+.fText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.fText strong {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+}
+.fText small {
+  display: none;
+  font-size: 11px;
+  line-height: 1.35;
+  color: #9aa0bd;
+}
+
+/* tablet: 2 x 2 compact grid, titles only (keeps the card under 540px) */
+@media (max-width: 1023.98px) {
+  .strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 0;
+  }
+  .feature:nth-child(3) {
+    border-left: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .fText small {
+    display: block;
+  }
+}

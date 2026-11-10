@@ -1,0 +1,31 @@
+/* Global tokens + base. Loaded AFTER Bootstrap so these win. */
+:root {
+  --ve-bg: #161827;
+  --ve-text: #f3f4fb;
+  --ve-muted: #aab0cc;
+  --ve-gold: #f2c869;
+}
+
+html,
+body {
+  background-color: var(--ve-bg);
+}
+
+body {
+  margin: 0;
+  color: var(--ve-text);
+  font-family: 'Plus Jakarta Sans Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Respect users who ask for less motion. Every animation here is written so
+   its FINAL state is the normal CSS state, so disabling animation never hides content. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

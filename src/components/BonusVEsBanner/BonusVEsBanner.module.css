@@ -1,0 +1,99 @@
+/* Theme: deep navy + warm gold (VE = gold). */
+.theme {
+  --card-bg: radial-gradient(50% 80% at 72% 55%, rgba(230, 180, 80, 0.16), transparent 70%),
+    radial-gradient(40% 60% at 40% 20%, rgba(70, 100, 230, 0.2), transparent 70%),
+    linear-gradient(135deg, #141a3d 0%, #0e1230 60%, #121639 100%);
+  --card-border: rgba(120, 140, 230, 0.25);
+  --card-border-hover: rgba(226, 180, 85, 0.6);
+  --card-glow: rgba(226, 180, 85, 0.45);
+}
+
+.line {
+  display: block;
+}
+
+.accent {
+  background: linear-gradient(90deg, #f3d27a, #c99a3c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.divider {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.rule {
+  width: 56px;
+  height: 2px;
+  background: linear-gradient(90deg, #c99a3c, transparent);
+}
+.chev {
+  color: #c99a3c;
+  font-size: 14px;
+  letter-spacing: -1px;
+}
+
+/* the bonus meter fills once when the card scrolls into view */
+.progress {
+  animation: fill 1.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-play-state: var(--play);
+}
+@keyframes fill {
+  from {
+    stroke-dashoffset: 352;
+  }
+}
+
+.dash {
+  animation: flow 1.6s linear infinite;
+  animation-play-state: var(--play);
+}
+@keyframes flow {
+  to {
+    stroke-dashoffset: -22;
+  }
+}
+
+.beam {
+  animation: beam 3s ease-in-out infinite alternate;
+  animation-play-state: var(--play);
+}
+@keyframes beam {
+  from {
+    opacity: 0.55;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bobA,
+.bobB,
+.bobC {
+  animation-name: bob;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: var(--play);
+}
+.bobA {
+  animation-duration: 3.4s;
+}
+.bobB {
+  animation-duration: 4.6s;
+  animation-delay: -1.2s;
+}
+.bobC {
+  animation-duration: 4s;
+  animation-delay: -2.2s;
+}
+@keyframes bob {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-8px);
+  }
+}
