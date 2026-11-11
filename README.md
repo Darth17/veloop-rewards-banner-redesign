@@ -44,14 +44,6 @@ npm run dev
 | `npm run build` | Create a production build in `dist/` |
 | `npm run preview` | Preview the production build locally |
 
-## Screenshots
-
-### Swap Center and Bonus VEs
-![Swap Center and Bonus VEs](docs/screenshots/swap-bonus.png)
-
-### VELOOP Rewards header and Refer & Earn
-![VELOOP Rewards header and Refer & Earn](docs/screenshots/header-refer.png)
-
 ## Links
 
 - **Live website:** https://veloop-rewards-banner-redesign-ten.vercel.app/
