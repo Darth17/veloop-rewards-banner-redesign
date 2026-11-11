@@ -1,5 +1,9 @@
 # VELOOP Rewards: Banner Redesign (Task 08)
 
+## Live Demo
+
+**[View the live VELOOP Rewards website](https://veloop-rewards-banner-redesign-ten.vercel.app/)**
+
 ## Project Overview
 Five premium, fintech-style promotional banners for the VELOOP Rewards platform, built as a reusable React banner system. Page background is `#161827`; every banner is 100% width and stays inside the required height range on each device.
 
@@ -27,7 +31,7 @@ React 18, Vite, Bootstrap 5 (layout), CSS Modules, React Hooks, React Router, Lu
 npm install
 npm run dev
 ```
-Open the URL Vite prints (usually http://localhost:5173).
+After starting the development server, open the local URL printed by Vite in your terminal.
 
 ## Development Commands
 | Command | What it does |
@@ -65,13 +69,11 @@ Captcha: floating gems, typing caret, submit pulse. Bonus: ring fills once, dash
 Reward values (500 / 200 VEs) are **sample** data from the design. Replace them in `src/utils/bannerData.js` with approved referral rules before publishing.
 
 ## Screenshots
-_Add screenshots here after running locally._
-
-## Live Demo
-_Not deployed yet._
+_Add screenshots here._
 
 ## GitHub Repository
-_Not pushed yet._
+
+[View the source code on GitHub](https://github.com/Darth17/veloop-rewards-banner-redesign)
 
 ## Author
 _Your name_
