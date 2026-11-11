@@ -47,10 +47,10 @@ npm run dev
 ## Screenshots
 
 ### Swap Center and Bonus VEs
-![Swap Center and Bonus VEs](docs/screenshots/swap-bonus.jpg)
+![Swap Center and Bonus VEs](docs/screenshots/swap-bonus.png)
 
 ### VELOOP Rewards header and Refer & Earn
-![VELOOP Rewards header and Refer & Earn](docs/screenshots/header-refer.jpg)
+![VELOOP Rewards header and Refer & Earn](docs/screenshots/header-refer.png)
 
 ## Links
 
